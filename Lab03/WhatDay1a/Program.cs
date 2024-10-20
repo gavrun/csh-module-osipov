@@ -1,4 +1,4 @@
-﻿namespace WhatDay1
+﻿namespace WhatDay1a
 {
     enum MonthName
     {

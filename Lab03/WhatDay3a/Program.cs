@@ -1,4 +1,4 @@
-﻿namespace WhatDay3
+﻿namespace WhatDay3a
 {
     enum MonthName
     {
@@ -21,7 +21,6 @@
     {
         static void Main(string[] args)
         {
-            // All months days collection
             System.Collections.ICollection DaysInMonths = new int[12] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
             while (true)
@@ -32,6 +31,7 @@
                     int yearNum = int.Parse(Console.ReadLine());
 
                     bool isLeapYear = (yearNum % 4 == 0) && (yearNum % 100 != 0 || yearNum % 100 == 0);
+                    int maxDayNum = isLeapYear ? 366 : 365;
 
                     if (isLeapYear)
                     {
@@ -48,10 +48,16 @@
                         Console.ResetColor();
                     }
 
-                    Console.Write("Please enter a day number between 1 and 365: ");
+                    //Console.Write("Please enter a day number between 1 and 365: ");
+                    Console.Write("Please enter a day number between 1 and {0}: ", maxDayNum);
                     int dayNum = int.Parse(Console.ReadLine());
 
-                    if (dayNum < 1 || dayNum > 365)
+                    //if (dayNum < 1 || dayNum > 365)
+                    //{
+                    //    Console.ForegroundColor = ConsoleColor.Red;
+                    //    throw new ArgumentOutOfRangeException("Day out of range");
+                    //}
+                    if (dayNum < 1 || dayNum > maxDayNum)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         throw new ArgumentOutOfRangeException("Day out of range");
@@ -64,7 +70,7 @@
 
                     foreach (int daysInMonth in DaysInMonths)
                     {
-                        if (dayNum <= daysInMonth) // All months sequence
+                        if (dayNum <= daysInMonth) 
                         {
                             break;
                         }
@@ -83,6 +89,18 @@
                     Console.WriteLine("{1} {0}", dayNum, monthName);
                     Console.ResetColor();
 
+                    // Continue input
+                    Console.WriteLine("Check another year and day? (y/n)");
+                    string response = Console.ReadLine().ToLower();
+
+                        if (response != "y" && response != "n")
+                        {
+                            Console.WriteLine("Invalid input. Please enter 'y' or 'n'.");
+                        }
+                        else if (response == "n")
+                        {
+                            break;
+                        }
                 }
                 catch (Exception caught)
                 {
