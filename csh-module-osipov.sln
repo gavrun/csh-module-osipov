@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Divider2", "Lab03\Divider2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shooting", "Lab03\Shooting\Shooting.csproj", "{CDF2382F-82B3-4744-B33A-25ECC489570B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shooting2", "Lab03\Shooting2\Shooting2.csproj", "{607F9A62-95A1-4FDC-820C-4CBC3C8444A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{CDF2382F-82B3-4744-B33A-25ECC489570B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF2382F-82B3-4744-B33A-25ECC489570B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF2382F-82B3-4744-B33A-25ECC489570B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607F9A62-95A1-4FDC-820C-4CBC3C8444A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607F9A62-95A1-4FDC-820C-4CBC3C8444A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607F9A62-95A1-4FDC-820C-4CBC3C8444A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607F9A62-95A1-4FDC-820C-4CBC3C8444A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +140,7 @@ Global
 		{86ECB57F-50B9-46BC-985B-293FB2AF94DF} = {D97B9D44-FCDA-4CB5-A8FD-DE2B372CBB09}
 		{9CA1416A-A4BC-43D7-96E3-089953FE0A7A} = {D97B9D44-FCDA-4CB5-A8FD-DE2B372CBB09}
 		{CDF2382F-82B3-4744-B33A-25ECC489570B} = {D97B9D44-FCDA-4CB5-A8FD-DE2B372CBB09}
+		{607F9A62-95A1-4FDC-820C-4CBC3C8444A4} = {D97B9D44-FCDA-4CB5-A8FD-DE2B372CBB09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {477323D2-BE5B-48F2-8EAE-FE09C20029C9}
