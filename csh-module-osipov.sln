@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treug2", "Lab04\Treug2\Treu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treug2a", "Lab04\Treug2a\Treug2a.csproj", "{3519E0B7-A695-4F0F-995D-52560F8D7178}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quadratic", "Lab04\Quadratic\Quadratic.csproj", "{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{3519E0B7-A695-4F0F-995D-52560F8D7178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3519E0B7-A695-4F0F-995D-52560F8D7178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3519E0B7-A695-4F0F-995D-52560F8D7178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,6 +172,7 @@ Global
 		{9F6054FB-A39C-42B9-8DCF-A070473B75D5} = {CF7CDA7B-C2EC-48F2-BA4A-0E56D312A2EA}
 		{41AA1F48-6812-48BB-BC59-F7574598F6AA} = {CF7CDA7B-C2EC-48F2-BA4A-0E56D312A2EA}
 		{3519E0B7-A695-4F0F-995D-52560F8D7178} = {CF7CDA7B-C2EC-48F2-BA4A-0E56D312A2EA}
+		{A419DE3B-F89E-4B99-8D29-35C61FEC2D5C} = {CF7CDA7B-C2EC-48F2-BA4A-0E56D312A2EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {477323D2-BE5B-48F2-8EAE-FE09C20029C9}
