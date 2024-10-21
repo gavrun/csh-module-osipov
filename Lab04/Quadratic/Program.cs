@@ -46,10 +46,6 @@
             //quadratic equation
             int result = QuadEq.CalcQuadEq(out rX1, out rX2, cA, cB, cC);
 
-            // equation, 0 = a * Math.Pow(x, 2) + b * x + c
-            // debug
-            Console.WriteLine($"DEBUG equation: {cA} * (X)^2, 2) + {cB} * (X) + {cC} = 0 .");
-
             // results
             if (result > 0)
             {
@@ -61,6 +57,17 @@
             {
                 Console.WriteLine($"No real roots for the equation with coefficients a = {cA}, b = {cB}, c = {cC}.");
             }
+
+            // equation, 0 = a * Math.Pow(x, 2) + b * x + c
+            // debug
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"DEBUG your equation: {cA} * (X)^2 + {cB} * (X) + {cC} = 0");
+            Console.WriteLine("DEBUG other examples:\n" +
+                "No real roots: a = 1, b = 2, c = 3\n" +
+                "One root (double): a = 1, b = -4, c = 4 (x1 = x2 = 2)\n" +
+                "Two distinct roots: a = 1, b = -5, c = 6 (x1 = 3, x2 = 2)\n" +
+                "Two distinct roots: a = 2, b = -8, c = 6 (x1 = 3, x2 = 1)");
+            Console.ResetColor();
         }
     }
 }
