@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "pD02": {
+      "commandName": "Project",
+      "commandLineArgs": "Вася Коля Петя"
+    }
+  }
+}

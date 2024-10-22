@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hello</name>
+    </assembly>
+    <members>
+        <member name="T:Hello.MyF">
+            <summary> Класс MyF выводит приветствие на экран </summary> 
+        </member>
+        <member name="M:Hello.MyF.Hi">
+            <summary>
+            Метод выводит приветствие
+            </summary>
+            <remarks> We use console-based I/O.
+            </remarks>
+        </member>
+        <member name="M:Hello.MyF.Pri(System.String)">
+            <summary>
+            Метод выводит приветствие со склейкой текста
+            </summary>
+             <param name ="st" > Параметр передается для склейки со строкой </param>
+        </member>
+        <member name="M:Hello.Hello.Main(System.String[])">
+            <param name = "args"> В методе принимается массив строк</param>
+            <summary>
+            Точка входа в приложение.
+            </summary>
+        </member>
+    </members>
+</doc>
