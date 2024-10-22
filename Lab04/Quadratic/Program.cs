@@ -2,7 +2,7 @@
 {
     internal class QuadEq
     {
-        public static int CalcQuadEq(out double rootX1, out double rootX2, double coefA = 0, double coefB = 0, double coefC = 0)
+        public static int CalcQuadEq(out double rootX1, out double rootX2, double coefA, double coefB, double coefC)
         {
             rootX1 = 0; //default here, 'out' by reference
             rootX2 = 0;
