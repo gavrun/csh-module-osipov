@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FileDetails": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\itmo\\02\\csh-module-osipov\\Lab05\\FileDetails\\Program.cs"
+    }
+  }
+}
