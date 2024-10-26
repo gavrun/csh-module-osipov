@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAccount", "Lab06\Crea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMethods", "Lab06\MoreMethods\MoreMethods.csproj", "{BF13DBC0-1834-49BA-9DB2-225928483FA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treug3", "Lab06\Treug3\Treug3.csproj", "{939AB02C-FD82-4D37-9780-F8C02A32CC8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -205,6 +207,10 @@ Global
 		{BF13DBC0-1834-49BA-9DB2-225928483FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF13DBC0-1834-49BA-9DB2-225928483FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF13DBC0-1834-49BA-9DB2-225928483FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939AB02C-FD82-4D37-9780-F8C02A32CC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939AB02C-FD82-4D37-9780-F8C02A32CC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939AB02C-FD82-4D37-9780-F8C02A32CC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939AB02C-FD82-4D37-9780-F8C02A32CC8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,6 +245,7 @@ Global
 		{1849FB71-C9E2-4E6F-98C4-B8BF9D1662B3} = {0BF84C52-C97F-4766-9993-5529C5621624}
 		{D3DDF0FB-DD47-4CBF-B813-1EA982D11D17} = {F9C64ADC-F17E-4DD5-BBCF-E029648F13C2}
 		{BF13DBC0-1834-49BA-9DB2-225928483FA1} = {F9C64ADC-F17E-4DD5-BBCF-E029648F13C2}
+		{939AB02C-FD82-4D37-9780-F8C02A32CC8D} = {F9C64ADC-F17E-4DD5-BBCF-E029648F13C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {477323D2-BE5B-48F2-8EAE-FE09C20029C9}
