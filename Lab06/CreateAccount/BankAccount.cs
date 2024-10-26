@@ -12,11 +12,19 @@ namespace CreateAccount
         private decimal accBal;
         private AccountType accType;
 
-        public void Populate(long number, decimal balance)
+        private static long nextAccNo = 123;
+
+        public void Populate(decimal balance)
         {
-            accNo = number;
+            //accNo = number;
+            accNo = NextNumber();
             accBal = balance;
             accType = AccountType.Checking;
+        }
+
+        private static long NextNumber()
+        {
+            return nextAccNo++;
         }
 
         public long Number()

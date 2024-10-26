@@ -1,6 +1,6 @@
 ﻿namespace CreateAccount
 {
-    public enum AccountType { 
+    internal enum AccountType { 
         Checking, 
         Deposit 
     }
