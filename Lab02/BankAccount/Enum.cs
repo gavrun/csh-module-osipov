@@ -14,7 +14,7 @@
 
             goldAccount = AccountType.Checking;
             platinumAccount = AccountType.Deposit;
-            goldAccount.Equals(AccountType.)
+            goldAccount.Equals(AccountType.Checking);
 
             Console.WriteLine("The Customer Account Type is {0}", goldAccount);
             Console.WriteLine("The Customer Account Type is {0}", platinumAccount);
