@@ -8,6 +8,7 @@
             string isEq = Console.ReadLine();
 
             TableBuilder tableBuilder = new TableBuilder();
+            TableBuilder tableBuilderN = new TableBuilder();
 
             Console.WriteLine("Well..");
 
@@ -51,16 +52,16 @@
 
                     Console.WriteLine("DEBUG table style 2 with empty cells");
                     // table header
-                    tableBuilder.AddHeader("Sides", "Perimeter", "Area");
+                    tableBuilderN.AddHeader("Sides", "Perimeter", "Area");
                     // table rows
                     string[] row1 = (string[])(triangle.GetSideA()).Concat(triangle.GetPerimeter()).Concat(triangle.GetArea()).ToArray();
                     string[] row2 = (string[])(triangle.GetSideB()).ToArray();
                     string[] row3 = (string[])(triangle.GetSideC()).ToArray();
-                    tableBuilder.AddRow(row1);
-                    tableBuilder.AddRow(row2);
-                    tableBuilder.AddRow(row3);
+                    tableBuilderN.AddRow(row1);
+                    tableBuilderN.AddRow(row2);
+                    tableBuilderN.AddRow(row3);
                     // print table
-                    tableBuilder.PrintTable();
+                    tableBuilderN.PrintTable();
                 }
                 catch (Exception ex)
                 {

@@ -36,17 +36,13 @@ namespace Treug3a
         // add rows which meet headers 1=1 and width
         public void AddRow(params string[] row)
         {
-            //if (row.Length != headers.Count) // string array vs collection
-            //{
-            //    throw new ArgumentException("DEBUG array length must be equal to collection count");
-            //}
-
             // save headers
             var rowdata = new List<string>(); // List<string>?
 
             // add empty header
             for (int i = 0; i < headers.Count; i++)
             {
+                //Console.WriteLine($"DEBUG: Headers count: {headers.Count}, Current row count: {rowdata.Count}");
                 rowdata.Add(i < row.Length ? row[i] : ""); // check if row cell with data ? true add cell data : false add empty data
             }
             rows.Add(rowdata);
@@ -54,6 +50,7 @@ namespace Treug3a
             // update widths to widest
             for (int i = 0; i < headers.Count; i++)
             {
+                //Console.WriteLine($"DEBUG: Headers count: {headers.Count}, Current row count: {rowdata.Count}");
                 widths[i] = Math.Max(widths[i], rowdata[i].Length); // compare width to element max width
             }
         }

@@ -73,16 +73,11 @@ namespace Treug3a
         }
         public string[] GetSides()
         {
-            //return $"Triangle sides:\nSide A: {a:F2}\nSide B: {b:F2}\nSide C: {c:F2}\n";
             return new string[] { a.ToString("F2"), b.ToString("F2"), c.ToString("F2") };
         }
         // method, pass all triangle properties
         public string[] GetAll()
         {
-            //double area = CalcArea();
-            //double perimeter = CalcPerimeter();
-            //return $"Sides:\nSide A: {a:F2}, Side B: {b:F2}, Side C: {c:F2}\n" +
-            //       $"Area: {area:F2}\nPerimeter: {perimeter:F2}\n";
             return new string[] { a.ToString("F2"), b.ToString("F2"), c.ToString("F2"), CalcArea().ToString("F2"), CalcPerimeter().ToString("F2") };
         }
     }
