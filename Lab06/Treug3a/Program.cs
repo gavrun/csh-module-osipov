@@ -1,69 +1,13 @@
 ﻿namespace Treug3a
 {
-    internal class Triangle
-    {
-        // feilds, triangle sides
-        private double a;
-        private double b;
-        private double c;
-
-        // constructor, create triangle and check if valid sides
-        public Triangle(double sideA, double sideB, double sideC)
-        {
-            a = sideA;
-            b = sideB;
-            c = sideC;
-
-            if (!IsValid())
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("A triangle with such sides cannot be made.");
-                Console.ResetColor();
-                throw new ArgumentException("Invalid side lengths for a triangle.");
-            }
-        }
-
-        // method, sides okay triable can be made
-        public bool IsValid()
-        {
-            return (a + b > c) && (b + c > a) && (a + c > b);
-        }
-
-        // method, calculate perimeter
-        public double CalcPerimeter()
-        {
-            return a + b + c;
-        }
-
-        // method, calculate area
-        public double CalcArea()
-        {
-            double p = CalcPerimeter() / 2;
-            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
-        }
-
-        // method, pass triangle sides as string
-        public string GetSides()
-        {
-            return $"Triangle sides:\nSide A: {a:F2}\nSide B: {b:F2}\nSide C: {c:F2}\n";
-        }
-
-        // method,
-        public string GetArea()
-        {
-            double area = CalcArea();
-            double perimeter = CalcPerimeter();
-            return $"Sides:\nSide A: {a:F2}, Side B: {b:F2}, Side C: {c:F2}\n" + 
-                   $"Area: {area:F2}\nPerimeter: {perimeter:F2}\n";
-        }
-    }
-
     internal class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Do you want to calculate the area of an equilateral triangle? (y/n)");
             string isEq = Console.ReadLine();
+
+            TableBuilder tableBuilder = new TableBuilder();
 
             Console.WriteLine("Well..");
 
@@ -74,18 +18,14 @@
 
                 // create object of class
                 Triangle equilateralTriangle = new Triangle(side, side, side);
-
-                //double area = equilateralTriangle.CalcArea();
-                //double perimeter = equilateralTriangle.CalcPerimeter();
-
-                //Console.WriteLine("---------------------------------");
-                //Console.WriteLine("| Side    | Area    | Perimeter |");
-                //Console.WriteLine("---------------------------------");
-                //Console.WriteLine("| {0:F2}    | {1:F2}    | {2:F2}      |", side, area, perimeter);
-                //Console.WriteLine("---------------------------------");
-
-                Console.WriteLine(equilateralTriangle.GetSides());
-                Console.WriteLine(equilateralTriangle.GetArea());
+                
+                Console.WriteLine("DEBUG table style 1 has no empty cells");
+                // table header
+                tableBuilder.AddHeader("Side A", "Side B", "Side C", "Area", "Perimeter");
+                // table row
+                tableBuilder.AddRow(equilateralTriangle.GetAll());
+                // print table
+                tableBuilder.PrintTable();
             }
             else
             {
@@ -101,19 +41,26 @@
                     // create object of class
                     Triangle triangle = new Triangle(a, b, c);
 
-                    //double area = triangle.CalcArea();
-                    //double perimeter = triangle.CalcPerimeter();
+                    Console.WriteLine("DEBUG table style 1 has no empty cells");
+                    // table header
+                    tableBuilder.AddHeader("Side A", "Side B", "Side C", "Area", "Perimeter");
+                    // table row
+                    tableBuilder.AddRow(triangle.GetAll());
+                    // print table
+                    tableBuilder.PrintTable();
 
-                    //Console.WriteLine("---------------------------------");
-                    //Console.WriteLine("| Sides   | Area    | Perimeter |");
-                    //Console.WriteLine("---------------------------------");
-                    //Console.WriteLine("| {0:F2}    | {1:F2}    | {2:F2}      |", a, area, perimeter);
-                    //Console.WriteLine("| {0:F2}    |         |           |", b);
-                    //Console.WriteLine("| {0:F2}    |         |           |", c);
-                    //Console.WriteLine("---------------------------------");
-
-                    Console.WriteLine(triangle.GetSides());
-                    Console.WriteLine(triangle.GetArea());
+                    Console.WriteLine("DEBUG table style 2 with empty cells");
+                    // table header
+                    tableBuilder.AddHeader("Sides", "Perimeter", "Area");
+                    // table rows
+                    string[] row1 = (string[])(triangle.GetSideA()).Concat(triangle.GetPerimeter()).Concat(triangle.GetArea()).ToArray();
+                    string[] row2 = (string[])(triangle.GetSideB()).ToArray();
+                    string[] row3 = (string[])(triangle.GetSideC()).ToArray();
+                    tableBuilder.AddRow(row1);
+                    tableBuilder.AddRow(row2);
+                    tableBuilder.AddRow(row3);
+                    // print table
+                    tableBuilder.PrintTable();
                 }
                 catch (Exception ex)
                 {
