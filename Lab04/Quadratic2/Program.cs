@@ -2,7 +2,7 @@
 {
     internal class QuadEq
     {
-        public static int CalcQuadEq(out double rootX1, out double rootX2, double coefA, double coefB, double coefC)
+        public static (int result, double? root1, double? root2) /*int*/ CalcQuadEq(out double rootX1, out double rootX2, double coefA, double coefB, double coefC)
         {
             rootX1 = 0; //default here, 'out' by reference
             rootX2 = 0;
@@ -14,16 +14,19 @@
             {
                 rootX1 = (-coefB + Math.Sqrt(discriminant)) / (2 * coefA);
                 rootX2 = (-coefB - Math.Sqrt(discriminant)) / (2 * coefA);
-                return 1;
+                //return 1;
+                return (1, rootX1, rootX2);
             }
             else if (discriminant == 0)
             {
                 rootX1 = -coefB / (2 * coefA);
                 rootX2 = rootX1;
-                return 0;
+                //return 0;
+                return (0, rootX1, rootX2);
             }
             else
-                return -1;
+                //return -1;
+                return (-1, null, null);
 
         }
     }
@@ -46,16 +49,17 @@
             double rX1, rX2;
 
             //quadratic equation
-            int result = QuadEq.CalcQuadEq(out rX1, out rX2, cA, cB, cC);
+            //int result = QuadEq.CalcQuadEq(out rX1, out rX2, cA, cB, cC);
+            var (result, root1, root2) = QuadEq.CalcQuadEq(out rX1, out rX2, cA, cB, cC);
 
             // results
             if (result > 0)
             {
-                Console.WriteLine($"The equation with coefficients a = {cA}, b = {cB}, c = {cC} has two distinct roots: x1 = {rX1}, x2 = {rX2}");
+                Console.WriteLine($"The equation with coefficients a = {cA}, b = {cB}, c = {cC} has two distinct roots: x1 = {root1}, x2 = {root2}");
             }
             else if (result == 0)
             {
-                Console.WriteLine($"The equation with coefficients a = {cA}, b = {cB}, c = {cC} has one root: x1 = x2 = {rX1}");
+                Console.WriteLine($"The equation with coefficients a = {cA}, b = {cB}, c = {cC} has one root: x1 = x2 = {root1}");
             }
             else
             {
