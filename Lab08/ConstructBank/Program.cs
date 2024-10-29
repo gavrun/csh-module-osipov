@@ -17,7 +17,7 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Bank account");
+            Console.WriteLine("Bank account\n");
 
             //AccountType goldAccount;
             //AccountType platinumAccount;
@@ -69,6 +69,23 @@
             Write(acc2);
             Write(acc3);
             Write(acc4);
+
+            acc1.Deposit(100);
+            acc1.Withdraw(50);
+            acc2.Deposit(75);
+            acc2.Withdraw(50);
+            acc3.Withdraw(30);
+            acc3.Deposit(40);
+            acc4.Deposit(200);
+            acc4.Withdraw(450);
+            acc4.Deposit(25);
+            Console.WriteLine();
+
+            Write(acc1);
+            Write(acc2);
+            Write(acc3);
+            Write(acc4);
+
         }
 
         //static BankAccount NewBankAccount()
@@ -88,23 +105,31 @@
             Console.WriteLine("Account number is {0}", toWrite.Number());
             Console.WriteLine("Account balance is {0}", toWrite.Balance());
             Console.WriteLine("Account type is {0}", toWrite.Type());
-        }
 
-        static void TestDeposit(BankAccount toDeposit)
-        {
-            Console.Write("Enter amount to deposit: ");
-            decimal amount = decimal.Parse(Console.ReadLine());
-            toDeposit.Deposit(amount);
-        }
-
-        static void TestWithdraw(BankAccount acc)
-        {
-            Console.Write("Enter amount to withdraw: ");
-            decimal amount = decimal.Parse(Console.ReadLine());
-            if (!acc.Withdraw(amount))
+            Console.WriteLine("Transactions:");
+            foreach (BankTransaction tran in toWrite.Transactions())
             {
-                Console.WriteLine("Insufficient funds to withdraw.");
+                Console.WriteLine("Date/Time: {0}\tAmount: {1}",
+                tran.When(), tran.Amount());
             }
+            Console.WriteLine();
         }
+
+        //static void TestDeposit(BankAccount toDeposit)
+        //{
+        //    Console.Write("Enter amount to deposit: ");
+        //    decimal amount = decimal.Parse(Console.ReadLine());
+        //    toDeposit.Deposit(amount);
+        //}
+
+        //static void TestWithdraw(BankAccount acc)
+        //{
+        //    Console.Write("Enter amount to withdraw: ");
+        //    decimal amount = decimal.Parse(Console.ReadLine());
+        //    if (!acc.Withdraw(amount))
+        //    {
+        //        Console.WriteLine("Insufficient funds to withdraw.");
+        //    }
+        //}
     }
 }

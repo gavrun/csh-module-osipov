@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace ConstructBank
         private BankAccountType accType;
 
         private static long nextAccNo = 123;
+
+        private Queue tranQueue = new Queue();
 
         /*public BankAccount()
         {
@@ -68,6 +71,11 @@ namespace ConstructBank
             return accType.ToString();
         }
 
+        public Queue Transactions()
+        {
+            return tranQueue;
+        }
+
         public decimal Deposit(decimal amount)
         {
             if (amount < 0)
@@ -76,6 +84,10 @@ namespace ConstructBank
                 return accBal;
             }
             accBal += amount;
+
+            BankTransaction tran = new BankTransaction(amount);
+            tranQueue.Enqueue(tran);
+
             return accBal;
         }
 
@@ -86,6 +98,10 @@ namespace ConstructBank
             {
                 accBal -= amount;
             }
+
+            BankTransaction tran = new BankTransaction(-amount);
+            tranQueue.Enqueue(tran);
+
             return sufficientFunds;
         }
         public void TransferFrom(BankAccount accFrom, decimal amount)
