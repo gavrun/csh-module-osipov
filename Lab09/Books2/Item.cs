@@ -6,18 +6,29 @@ using System.Threading.Tasks;
 
 namespace Books2
 {
-    internal class Item
+    internal abstract class Item
     {
         protected long invNumber;
 
         protected bool taken;
 
+        public Item()
+        {
+            this.taken = false; // corrected
+        }
+
+        public Item(long invNumber, bool taken)
+        {
+            this.invNumber = invNumber;
+            this.taken = taken;
+        }
+
         public bool IsAvailable()
         {
             if (taken == true)
-                return true;
+                return false; // corrected
             else
-                return false;
+                return true;
         }
 
         public long GetInvNumber()
@@ -27,17 +38,22 @@ namespace Books2
 
         public void Take()
         {
-            taken = false;
+            taken = true; // corrected
+        }
+        public void TakeItem()
+        {
+            if (this.IsAvailable())
+                this.Take();
         }
 
-        public void Return()
-        {
-            taken = true;
-        }
+        public abstract void Return(); // now virtual, now abstract
+        //{
+        //    taken = false; // corrected
+        //}
 
-        public void Show() // method conflict with derived class, could be virtual
+        public virtual void Show() // method conflict with derived class, could be virtual, now virtual
         {
-            Console.WriteLine("Status:\n Inventory Number: {0}\n Availability: {1}", invNumber, taken);
+            Console.WriteLine("Status:\n Inventory Number: {0}\n Availability: {1}", invNumber, (!taken)); // corrected
         }
 
     }

@@ -17,6 +17,8 @@ namespace Books2
 
         private static double price = 9;
 
+        private bool returnSrok;
+
         public Book() // default ctor
         { }
 
@@ -34,14 +36,24 @@ namespace Books2
             this.year = year;
         }
 
+        public Book(String author, String title, String publisher, int pages, int year, long invNumber, bool taken) : base(invNumber, taken)
+        {
+            this.author = author;
+            this.title = title;
+            this.publisher = publisher;
+            this.pages = pages;
+            this.year = year;
+        }
+
         public static void SetPrice(double price)
         {
             Book.price = price;
         }
 
-        new public void Show() // base class method hiding
+        public override void Show() // base class method hiding, of virtual method
         {
             Console.WriteLine("\nBook:\n Author: {0}\n Title: {1}\n Year of Publication: {2}\n {3} pages\n Rental Price: {4}", author, title, year, pages, Book.price);
+            base.Show();
         }
 
         public double PriceBook(int s)
@@ -50,10 +62,24 @@ namespace Books2
             return cust;
         }
 
-        public void TakeItem()
+        //public void TakeItem()
+        //{
+        //    if (this.IsAvailable())
+        //        this.Take();
+        //}
+
+        public void ReturnSrok()
         {
-            if (this.IsAvailable())
-                this.Take();
+            returnSrok = true;
         }
+
+        public override void Return() // implement virtual method
+        {
+            if (returnSrok == true)
+                taken = false;
+            else
+                taken = true;
+        }
+
     }
 }
