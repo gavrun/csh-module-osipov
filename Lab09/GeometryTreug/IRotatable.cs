@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Books2
+namespace GeometryTreug
 {
-    internal interface IPubs
+    public interface IRotatable
     {
-        bool IfSubs { get; set; }
-        void Subs();
+        void RotateShape();
     }
 }
