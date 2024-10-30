@@ -1,0 +1,4 @@
+Amount: 100	Date: 10/30/2024 10:54:33 PM
+Amount: -50	Date: 10/30/2024 10:54:33 PM
+Amount: -100	Date: 10/30/2024 10:54:33 PM
+Amount: 25	Date: 10/30/2024 10:54:33 PM
