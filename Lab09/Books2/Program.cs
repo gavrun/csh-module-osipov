@@ -4,12 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Book b2 = new Book("Толстой Л.Н.", "Война и мир", "Наука", 823, 2013);
+            Book b2 = new Book("Tolstoy L.N.", "War and Peace", "Science", 823, 2013);
             b2.Show();
 
             Book.SetPrice(12);
             b2.Show();
 
+            Item item1 = new Item();
+            item1.Show();
         }
     }
 }

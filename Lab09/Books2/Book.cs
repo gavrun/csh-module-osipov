@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Books2
 {
-    internal class Book
+    internal class Book : Item
     {
         private string author;
         private string title;
@@ -25,7 +25,7 @@ namespace Books2
             price = 10;
         }
 
-        public Book(string author, string title, string publisher, int pages, int year)
+        public Book(string author, string title, string publisher, int pages, int year) // overloading ctor
         {
             this.author = author;
             this.title = title;
@@ -39,9 +39,9 @@ namespace Books2
             Book.price = price;
         }
 
-        public void Show()
+        new public void Show() // base class method hiding
         {
-            Console.WriteLine("\nКнига:\n Автор: {0}\n Название: {1}\nГод издания: { 2}\n {3}стр.\n Стоимость аренды: {4}", author, title, year, pages, Book.price);
+            Console.WriteLine("\nBook:\n Author: {0}\n Title: {1}\n Year of Publication: {2}\n {3} pages\n Rental Price: {4}", author, title, year, pages, Book.price);
         }
 
         public double PriceBook(int s)
@@ -50,5 +50,10 @@ namespace Books2
             return cust;
         }
 
+        public void TakeItem()
+        {
+            if (this.IsAvailable())
+                this.Take();
+        }
     }
 }
