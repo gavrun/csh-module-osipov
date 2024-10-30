@@ -106,7 +106,7 @@ namespace Bank3
             //Write(acc3);
             //Write(acc4);
 
-            Console.WriteLine("\nSid's Account");
+            //Console.WriteLine("\nSid's Account");
             //Bank bank = new Bank();
             //BankAccount sids = bank.CreateAccount();
             //TestDeposit(sids);
@@ -129,12 +129,13 @@ namespace Bank3
             //    Console.WriteLine("Something went wrong closing the account");
             //}
 
-            long sidsAccNo = Bank.CreateAccount();
-            BankAccount sids = Bank.GetAccount(sidsAccNo);
+            Console.WriteLine("\nSid's Account");
+            long sidsAccNo = Banking.Bank.CreateAccount();
+            Banking.BankAccount sids = Banking.Bank.GetAccount(sidsAccNo);
             TestDeposit(sids);
             TestWithdraw(sids);
             Write(sids);
-            if (Bank.CloseAccount(sidsAccNo))
+            if (Banking.Bank.CloseAccount(sidsAccNo))
             {
                 Console.WriteLine("Account closed");
             }
@@ -157,14 +158,14 @@ namespace Bank3
         //    return created;
         //}
 
-        static void Write(BankAccount toWrite)
+        static void Write(Banking.BankAccount toWrite)
         {
             Console.WriteLine("Account number is {0}", toWrite.Number());
             Console.WriteLine("Account balance is {0}", toWrite.Balance());
             Console.WriteLine("Account type is {0}", toWrite.Type());
 
             Console.WriteLine("Transactions:");
-            foreach (BankTransaction tran in toWrite.Transactions())
+            foreach (Banking.BankTransaction tran in toWrite.Transactions())
             {
                 Console.WriteLine("Date/Time: {0}\tAmount: {1}",
                 tran.When(), tran.Amount());
@@ -172,14 +173,14 @@ namespace Bank3
             Console.WriteLine();
         }
 
-        static void TestDeposit(BankAccount toDeposit)
+        static void TestDeposit(Banking.BankAccount toDeposit)
         {
             Console.Write("Enter amount to deposit: ");
             decimal amount = decimal.Parse(Console.ReadLine());
             toDeposit.Deposit(amount);
         }
 
-        static void TestWithdraw(BankAccount acc)
+        static void TestWithdraw(Banking.BankAccount acc)
         {
             Console.Write("Enter amount to withdraw: ");
             decimal amount = decimal.Parse(Console.ReadLine());
