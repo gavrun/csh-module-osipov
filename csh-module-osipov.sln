@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTestAudit", "Lab11\Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTestEvent", "Lab11\BankTestEvent\BankTestEvent.csproj", "{FCACFA09-7C57-492C-AC83-2AF905582EBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance3", "Lab11\Distance3\Distance3.csproj", "{6FD33F12-5453-459B-8668-8E8474E311C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -365,6 +367,10 @@ Global
 		{FCACFA09-7C57-492C-AC83-2AF905582EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCACFA09-7C57-492C-AC83-2AF905582EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCACFA09-7C57-492C-AC83-2AF905582EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD33F12-5453-459B-8668-8E8474E311C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD33F12-5453-459B-8668-8E8474E311C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD33F12-5453-459B-8668-8E8474E311C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD33F12-5453-459B-8668-8E8474E311C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -423,6 +429,7 @@ Global
 		{C5A74171-6B09-4D84-906B-8C16EC65397B} = {889B7C81-411A-48C6-A5CE-8E1F884FFB45}
 		{3DB0BB85-F93E-4F74-8598-5297E081E4AD} = {889B7C81-411A-48C6-A5CE-8E1F884FFB45}
 		{FCACFA09-7C57-492C-AC83-2AF905582EBE} = {889B7C81-411A-48C6-A5CE-8E1F884FFB45}
+		{6FD33F12-5453-459B-8668-8E8474E311C6} = {889B7C81-411A-48C6-A5CE-8E1F884FFB45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {477323D2-BE5B-48F2-8EAE-FE09C20029C9}
